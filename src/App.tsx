@@ -1,12 +1,16 @@
+import { useState } from 'react';
 import './App.css'
 import { Calculator } from './Calculator';
 import { OnscreenQwerty } from './Keyboard';
 import { TextButtonInterface } from './TextButtonInterface';
 
 const App = () => {
+  const [word,setWord] = useState("");
+
   return (
     <main>
-      <OnscreenQwerty />
+      <OnscreenQwerty onChange={setWord} />
+      <p>User typed: {word}</p>
       <h1>Hello World!</h1>
       <h2>Text Button Interface Example</h2>
       <TextButtonInterface />

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const OnscreenQwerty = () => {
+export const OnscreenQwerty = ({onChange}) => {
     const [word, setWord] = useState("");
 
     const top = Array.from('qwertyuiop');
@@ -13,6 +13,9 @@ export const OnscreenQwerty = () => {
     const deleteLastLetter = () => {
         let wordLength = word.length;
         setWord(word.substring(0, wordLength - 1));
+    }
+    const onEnter = () => {
+        onChange(word);
     }
 
     return (
@@ -32,7 +35,7 @@ export const OnscreenQwerty = () => {
                 </div>
                 <div className="row">
                     {bottom.map(makeKey)}
-                    <button>Enter</button>
+                    <button onClick={onEnter}>Enter</button>
                 </div>
             </div>
         </div>
