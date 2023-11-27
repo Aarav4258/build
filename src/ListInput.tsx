@@ -33,7 +33,7 @@ export const ListOfStrings: React.FC<Props> = ({ initialList, onChange }) => {
 
     /* Callback to handle input */
     const onItemInput = (e: React.ChangeEvent<HTMLInputElement>, idx: number) => {
-        let newList = [...list];
+        let newList = [...list];  // Create a new copy of list to update
         newList[idx] = e.target.value;
         setList(newList);
     }
