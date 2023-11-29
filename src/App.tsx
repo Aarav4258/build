@@ -5,15 +5,31 @@ import { OnscreenQwerty } from './Keyboard';
 import { TextButtonInterface } from './TextButtonInterface';
 import { ValidatingTextInput } from './ValidatingTextInput';
 import { ListOfStrings } from './ListInput';
+import { GuessMyWordGame } from './GuessMyWord';
+import { MashComponent } from './MashEliminatorComponent';
+import { HappinessIndicator } from './HappinessIndicator';
 
 const App = () => {
   const [word, setWord] = useState<string>("");
   const [wordList, setWordList] = useState<string[]>([]);
   return (
+
     <main>
+
+      <HappinessIndicator
+        startingLevel={5}
+        onChange={(value) => window.alert(value)}
+      />
+
       <p>Hello World: This is just a bunch of components
         sitting around to demonstrate react patterns...
       </p>
+
+
+      <GuessMyWordGame />
+      <hr />
+      <MashComponent />
+      <hr />
       <div>
         <h2>Creating a Text Input and Validating its Input</h2>
         Use my Input: <ValidatingTextInput onInput={setWord} />
@@ -23,7 +39,7 @@ const App = () => {
         <h2>Using UseEffect to Run a Callback</h2>
 
       </div>
-    
+
       <div>
         <h2>A component for entering a list of strings</h2>
         <div>
