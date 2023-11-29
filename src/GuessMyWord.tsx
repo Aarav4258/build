@@ -24,6 +24,7 @@ export const GuessMyWordGame = () => {
     return (
         <main style={{border:"3px solid red","padding":"1em"}}>
             <h1>Guess My Word!</h1>
+            {/* Is the last guess not equal to answer*/}
             {answer != guesses[guesses.length - 1] &&
                 <div>
                     <Clue answer={answer} guesses={guesses} />
