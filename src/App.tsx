@@ -11,11 +11,13 @@ import { HappinessIndicator } from './HappinessIndicator';
 import { SimpleInput } from './SimpleInputComponent';
 import { MyDumbGame } from './SimpleTextGame';
 import { SimplerGuessMyWordGame } from './SimplerTextGame';
+import { AppWithStart } from './AppWithStart';
 
 const App = () => {
   const [selectedExample, setSelectedExample] = useState<string>('GuessMyWordGame');
 
   const examples = {
+    'Button with Grey Start' : <AppWithStart/>,
     'SimplerGuessMyWordGame': <SimplerGuessMyWordGame />,
     'MyDumbGame': <MyDumbGame />,
     'SimpleInput': <SimpleInput onChangeWord={(word: string) => window.alert('they typed: ' + word)} />,
