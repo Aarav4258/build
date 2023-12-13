@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <title>Sample portfolio write-up</title>
+
+    </head>
+    <body>
+        <article>            
+            <h2>My "Guess-My-Word" Game</h2>
+            <h3>Link to Working Game and Source Code</h3>
+            <ul>
+                <li>
+                    Play my game here: <a href="FIXME">If I were an actual student, this link would point to my published game!</a>
+                </li>
+                <li>
+                    Read my full source code here: <a href="https://github.com/IACS-CS/mash-demo-number/tree/main/src/">This link
+                        should point to your full source code.</a>
+                </li>
+            </ul>
+            <h3>Overview</h3>
+            <h4>Function &amp; Purpose</h4>
+            <p>My program allows the user to guess a word from a random list
+                of words. Each time the user guesses, they get feedback on whether
+                any of the letters they guessed was correct. Initially, all the user
+                knows is how many letters are in the word, but each guess gives them
+                more information.
+            </p>
+            <h4>Design Process</h4>
+            <p>I had to break my design into steps, including:</p>
+            <ul>
+                <li>Representing the list of words the user guessed as a list in TypeScript</li>
+                <li>Selecting a random word from the list for the user to guess.</li>
+                <li>Getting user input from an HTML input.</li>
+                <li>Comparing the user input to the word to show which letters were correct.</li>
+                <li>Allowing the user to start a new game when finished by choosing a new random word.</li>
+            </ul>
+            
+
+
+            <h3>Code Examples</h3>
+            <section>
+                <h4>Code Example 1</h4>
+                <h5>Principles in this Example</h5>
+                <div class="requirements" style="columns: 2; white-space: nowrap; pointer-events: none;">
+                    <!-- Notice I can add "checked" to any checkbox to make it show
+                    up as "checked off" -- pretty slick, no? -->
+                    <div><input type="checkbox"> Correcting Errors</div>
+                    <div><input type="checkbox" checked> Variables and Assignment</div>
+                    <div><input type="checkbox" checked> Procedures</div>
+                    <div><input type="checkbox" checked> Strings</div>
+                    <div><input type="checkbox" checked> Lists</div>
+                    <div><input type="checkbox"> Iteration</div>
+                    <div><input type="checkbox"> State</div>
+                    <div><input type="checkbox"> Callbacks</div>
+                </div>
+                <h5>What does this code do?</h5>
+                <p>This section of my code (1) defines a list and (2) defines a procedure
+                    which returns a random word from the list.
+                </p>
+                <p>In my game, that procedure is called once at the start of the game
+                    and then again each time the user starts a new game.
+                </p>
+                </div>
+                <!-- The JavaScript in main.js makes sure my code example from
+                code-examples/MashEx1.tsx actually shows up here -->
+                <pre><code lang="typescript" id="mash-ex-1"></code></pre>
+                <h5>Explanation</h5>            
+                <p><b>Defining a List</b>:
+                    To define a constant in TypeScript I use the <code>const</code> keyword,
+                    so the first line here defines a new constant named <code>words</code>.
+                </p>
+                <p>Each item in words is a <b>string</b>, which is defined using quotation marks.</p>
+                <p><b>Defining a procedure</b> The getRandomAnswer procedure takes no arguments and 
+                returns a random word from the list each time.</p>
+                <p>First, I get a random <em>index</em> for the list. In JavaScript, <code>Math.random()</code>
+                returns a random number between 0 and 1. By multiplying this number by the length of the list
+                and then taking the "floor" of that number, I get an integer between 0 and the length of the list.</p>
+                <p>Then I select the list item at index, so e.g. if the list has 10 items and I get a 4 for my
+                    <code>randomIndex</code>, then I would return 
+                    the 5th item of the list from <code>getRandomAnswer()</code> using the 
+                    syntax for selecting an item from a list: <code>words[randomIndex]</code>.
+                </p>  
+            </section>
+            <section>
+                <h4>Code Example 2</h4>          
+                <h5>Principles in this Example</h5>
+                <div class="requirements" style="columns: 2; white-space: nowrap; pointer-events: none">                    
+                    <!--  I can add "checked" to any checkbox to make it show
+                                up as "checked off" -- pretty slick, no? -->
+                    <div><input type="checkbox"> Correcting Errors</div>
+                    <div><input type="checkbox"> Variables and Assignment</div>
+                    <div><input type="checkbox" checked> Procedures</div>
+                    <div><input type="checkbox"> Strings</div>
+                    <div><input type="checkbox" checked> Lists</div>
+                    <div><input type="checkbox" checked> Iteration</div>
+                    <div><input type="checkbox" checked> State</div>
+                    <div><input type="checkbox"> Callbacks</div>
+                </div>
+                <h5>What does this code do?</h5>
+                <p>Plain language explanation of the code below...</p>
+                <h5>Code:</h5>            
+                <!-- The JavaScript in main.js makes sure my code example from
+                            code-examples/MashEx1.tsx actually shows up here -->
+                <pre><code lang="typescript" id="mash-ex-2"></code></pre>
+                <h5>Explanations</h5>
+                <p>Detailed explanation of how the code works, making sure to show
+                    understanding of the principles checked off above...
+                </p>
+            </section>
+            <section>
+                <h4>Code Example 3</h4>
+                <h5>Principles in this Example</h5>
+                <div class="requirements" style="columns: 2; white-space: nowrap; pointer-events: none">
+                    <!--  I can add "checked" to any checkbox to make it show
+                                            up as "checked off" -- pretty slick, no? -->
+                    <div><input type="checkbox" checked> Correcting Errors</div>
+                    <div><input type="checkbox" checked> Variables and Assignment</div>
+                    <div><input type="checkbox" checked> Procedures</div>
+                    <div><input type="checkbox"> Strings</div>
+                    <div><input type="checkbox"> Lists</div>
+                    <div><input type="checkbox"> Iteration</div>
+                    <div><input type="checkbox"> State</div>
+                    <div><input type="checkbox" checked> Callbacks</div>
+                </div>
+                <h5>What does this code do?</h5>
+                <p>Plain language explanation of the code below...</p>
+                <h5>Code:</h5>
+                <!-- The JavaScript in main.js makes sure my code example from
+                                        code-examples/MashEx1.tsx actually shows up here -->
+                <pre><code lang="typescript" id="mash-ex-3"></code></pre>
+                <h5>Explanations</h5>
+                <p>Detailed explanation of how the code works, making sure to show
+                    understanding of the principles checked off above...
+                </p>
+            </section>
+        </article>
+
+    </body>
+    <script src="./main.js" type="module">        
+    </script>
+</html>
